@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 bg-gradient-info vh-100">
+            <div class="row justify-content-center align-items-center text-white vh-100">
+                <div class="col-lg-7 col-md-8 col-11">
+                    <div class="text-center">
+                        <img src="<?= base_url(); ?>assets/img/Logo.png" alt="" class="" width="200px">
+                        <h3 class="text-center fw-bold mb-0">Selamat Datang</h3>
+                        <p>Di Laundry Dapper Wash</p>
+                    </div>
+                    <form class="mb-3" method="POST" action="<?= base_url(); ?>auth/registration">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nama Lengkap" value="<?= set_value("name"); ?>">
+                            <?= form_error("name", '<small class="text-warning">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Alamat Email" value="<?= set_value("email"); ?>">
+                            <?= form_error("email", '<small class="text-warning">', '</small>'); ?>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="password1">Password</label>
+                                <input type="password" class="form-control" id="password1" name="password1" placeholder="Password">
+                                <?= form_error("password1", '<small class="text-warning">', '</small>'); ?>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="password2">Konfirmasi Password</label>
+                                <input type="password" class="form-control" id="password2" name="password2" placeholder="Konfirmasi Password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                            Daftar Akun
+                        </button>
+                    </form>
+                    <div class="text-center">
+                        <span class="small text-white">Lupa Password?</span>
+                        <a class="small text-white" href="<?= base_url(); ?>auth/forgotpassword">Klik Disini</a>
+                    </div>
+                    <div class="text-center">
+                        <span class="small text-white">Sudah Punya Akun?</span>
+                        <a class="small text-white" href="<?= base_url(); ?>auth">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 bg-img vh-100 d-lg-block d-none"></div>
+    </div>
+</div>
